@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewRegistrationComponent } from './components/new-registration/new-registration.component';
+import { SSNRegistrationService } from "src/app/services/ssn-registration.service";
 
 @NgModule({
   declarations: [
@@ -12,9 +15,11 @@ import { NewRegistrationComponent } from './components/new-registration/new-regi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [SSNRegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

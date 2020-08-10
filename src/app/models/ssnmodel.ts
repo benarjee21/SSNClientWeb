@@ -1,10 +1,10 @@
 export class SsnModel{
     constructor(
-        public SSNId:number,
+        public SsnId:number,
         public firstName:string,
         public lastNmae:string,
         public gender:string,
         public dob:Date,
-        public state:string
+        public stateName:string
     ){}
 }

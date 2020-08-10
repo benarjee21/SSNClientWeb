@@ -14,6 +14,9 @@ export class SSNRegistrationService {
   public registerSSN(modelSsn){
     return this.http.post("http://localhost:2143/ssn-register",modelSsn,{responseType:'text' as 'json'});
   }
+  public getStateNames(){
+    return this.http.get("http://localhost:2143/all-states");
+  }
 
   public ssnModelSetter(model:SsnModel){
     this.currentModel=model;
